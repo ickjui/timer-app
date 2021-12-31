@@ -1,17 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
-import Timer from './Timer.js'
+import Timer from './Timer.js';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import reducers from './reducers'
+
+const store = createStore(reducers);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Welcome to My Timers ™️!
-        </p>
-      </header>
-      <Timer></Timer>
-    </div>
+    <Provider store={store}>
+      <h1>TMRZ</h1>
+    </Provider>
   );
 }
 
