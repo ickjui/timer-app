@@ -5,8 +5,11 @@ import { useDispatch } from 'react-redux'
 import { addTimer } from '../actions'
 
 export default function NewTimer() {
+//useState used to create a value that will be available across multiple renders of this component
     const [name, setName] = useState('')
+//dispatch will give you access to the Redux store and allow your component to send actions when you need to update the store
     const dispatch = useDispatch()
+
 
     return (
         <div>
